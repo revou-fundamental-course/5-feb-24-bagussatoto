@@ -17,4 +17,33 @@ function toggleKonversi() {
     reset();
 }
 
+function konversi() {
+    var input = document.getElementById("angka_input").value;
 
+    if (isNaN(input)) {
+        document.getElementById("angka_input");
+        return;
+    } else {
+        document.getElementById("angka_input");
+    }
+
+    var inputRounded = parseFloat(input);
+    var outputValue;
+
+    if (isCelsiusToFarhenheit) {
+        var celcius = parseFloat(input);
+        var fahrenheit = (celcius * 9 / 5) + 32;
+        outputValue = parseFloat(fahrenheit.toFixed(2));
+    } else {
+        var fahrenheit = parseFloat(input);
+        var celcius = (fahrenheit - 32) * 5 / 9;
+        outputValue = parseFloat(celcius.toFixed(2));
+    }
+
+    var inputLabel = isCelsiusToFarhenheit ? '°C' : '°F';
+    var outputLabel = isCelsiusToFarhenheit ? '°F' : '°C';
+    var kalkulasi = `(${inputRounded}${inputLabel} ${isCelsiusToFarhenheit ? '× 9/5) + 32' : '- 32) × 5/9'} = ${outputValue}${outputLabel}`;
+
+    document.getElementById("output").value = outputValue;
+    document.getElementById("output_kalkulasi").value = kalkulasi;
+}
