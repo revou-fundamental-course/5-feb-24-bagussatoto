@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Konversi Suhu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Website Konversi Suhu</h1>
+        <p><label for="paragraf-1">Masukkan suhu Celcius (°C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).</label></p>
+        <form name="form-konversi">
+            <table class="konversi">
+                <tbody>
+                    <tr>
+                        <td colspan="2"><label for="celcius">Celcius (°C):</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="angka_input" class="intext" autofocus tabindex="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="button" title="Konversi" class="btn" tabindex="2" onclick="konversi()">Konversi</button>
+                            <button type="reset" title="Reset" class="btn" tabindex="3" onclick="reset()">Reset</button>
+                            <button type="button" title="Reverse" class="btn" tabindex="4" onclick="toggleKonversi()">Reverse</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><label for="fahrenheit">Fahrenheit (°F):</label></td>
+                    </tr>
+                    <tr>
+                        <td><textarea rows="1" id="output" class="outtext" readonly tabindex="5"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Cara Kalkulasi:</td>
+                    </tr>
+                    <tr>
+                        <td><textarea rows="1" id="output_kalkulasi" class="outtext" readonly tabindex="5"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form><hr>
+        <h3><label for="h3">Cara Konversi dari Celcius ke Fahrenheit</label></h3>
+        <p><label for="paragraf-2">Suhu dalam Derajat Fahrenheit (°F) sama dengan suhu dalam Derajat Celcius (°C) dikali 9/5 ditambah 32</label></p>
+        <p><label for="paragraf-3">Suhu °F = (Suhu °C x 9/5) + 32</label></p>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
